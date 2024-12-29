@@ -1,0 +1,59 @@
+
+> eliza-client@1.0.0 start /workspace/eliza-client
+> node dist/index.js
+
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza-client/dist/index.js"],"CWD":"/workspace/eliza-client"} [0m
+
+Loaded .env file from: /workspace/eliza-client/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING_TYPE":"undefined","USE_OLLAMA_EMBEDDING_TYPE":"undefined","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Initializing AgentRuntime with options: [0m
+  [34m {"character":"Your Agent Name","modelProvider":"grok","characterModelProvider":"grok"} [0m
+
+[32m ✓ SUCCESS
+  [32m Agent ID [0m
+  [32m 95ecd756-ae9b-087d-8063-1d4c06b159da [0m
+
+[34m ["ℹ Setting model provider..."] [0m
+
+[34m ℹ INFORMATIONS
+  [34m Model Provider Selection: [0m
+  [34m {"characterModelProvider":"grok","optsModelProvider":"grok","finalSelection":"grok"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected model provider: [0m
+  [34m grok [0m
+
+[34m ℹ INFORMATIONS
+  [34m Selected image model provider: [0m
+  [34m grok [0m
+
+[37m ["◎ DirectClient constructor"] [0m
+
+(node:63031) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Runtime initialized successfully
+Server running on port 3000
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+[32m ✓ SUCCESS
+  [32m Database connection test successful: [0m
+  [32m {"now":"2024-12-29T02:36:08.800Z"} [0m
+
+Killed
+ ELIFECYCLE  Command failed with exit code 137.

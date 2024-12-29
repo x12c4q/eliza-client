@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.runtime = void 0;
-const core_1 = require("@elizaos/core");
-const adapter_postgres_1 = require("@elizaos/adapter-postgres");
+import { AgentRuntime, ModelProviderName, Clients, FsCacheAdapter } from "@elizaos/core";
+import { PostgresDatabaseAdapter } from "@elizaos/adapter-postgres";
 // Create cache manager
-const cacheManager = new core_1.FsCacheAdapter("./cache");
+const cacheManager = new FsCacheAdapter("./cache");
 // Create database adapter
-const db = new adapter_postgres_1.PostgresDatabaseAdapter({
+const db = new PostgresDatabaseAdapter({
     connectionString: process.env.DATABASE_URL,
     max: 20,
     idleTimeoutMillis: 30000,
@@ -16,11 +13,11 @@ const db = new adapter_postgres_1.PostgresDatabaseAdapter({
 const characterConfig = {
     name: "Your Agent Name",
     bio: "A brief description of your agent",
-    modelProvider: core_1.ModelProviderName.GROK,
+    modelProvider: ModelProviderName.GROK,
     lore: ["Background information about your agent"],
     messageExamples: [],
     postExamples: [],
-    clients: [core_1.Clients.DIRECT],
+    clients: [Clients.DIRECT],
     settings: {
         secrets: {
             GROK_API_KEY: process.env.GROK_API_KEY || '',
@@ -36,9 +33,9 @@ const characterConfig = {
     }
 };
 // Create runtime instance with all required properties
-const runtime = new core_1.AgentRuntime({
+const runtime = new AgentRuntime({
     token: process.env.GROK_API_KEY || '',
-    modelProvider: core_1.ModelProviderName.GROK,
+    modelProvider: ModelProviderName.GROK,
     character: characterConfig,
     serverUrl: process.env.VERCEL_URL || "http://localhost:3000",
     databaseAdapter: db,
@@ -50,4 +47,5 @@ const runtime = new core_1.AgentRuntime({
     services: [],
     managers: []
 });
-exports.runtime = runtime;
+// Export the runtime
+export { runtime };

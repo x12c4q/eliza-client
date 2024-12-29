@@ -17,7 +17,9 @@
     "@elizaos/adapter-sqlite": "0.1.7-alpha.2",
     "@elizaos/client-direct": "0.1.7-alpha.2",
     "@elizaos/core": "0.1.7-alpha.2",
+    "@types/cors": "^2.8.17",
     "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "uuid": "^11.0.3"
