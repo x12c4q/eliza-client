@@ -6,19 +6,29 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@elizaos/adapter-postgres": "0.1.7-alpha.2",
+    "@elizaos/adapter-sqlite": "0.1.7-alpha.2",
     "@elizaos/client-direct": "0.1.7-alpha.2",
     "@elizaos/core": "0.1.7-alpha.2",
-    "dotenv": "^16.4.7"
+    "better-sqlite3": "^11.7.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "uuid": "^11.0.3"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/express": "^5.0.0",
     "@types/node": "latest",
+    "@types/uuid": "^10.0.0",
     "ts-node": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vitest": "^2.1.8"
   }
 }

@@ -58,3 +58,36 @@ Loaded .env file from: /workspace/eliza-client/.env
 (Use `node --trace-deprecation ...` to show where the warning was created)
 [32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
 
+Killed
+ ELIFECYCLE  Command failed with exit code 137.
+
+> eliza-client@1.0.0 start /workspace/eliza-client
+> node dist/index.js
+
+[ElizaLogger] Initializing with:
+            isNode: true
+            verbose: false
+            VERBOSE env: undefined
+            NODE_ENV: undefined
+        
+[34m ℹ INFORMATIONS
+  [34m Loading embedding settings: [0m
+  [34m {"OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[34m ℹ INFORMATIONS
+  [34m Loading character settings: [0m
+  [34m {"ARGV":["/root/.nvm/versions/node/v23.5.0/bin/node","/workspace/eliza-client/dist/index.js"],"CWD":"/workspace/eliza-client"} [0m
+
+Loaded .env file from: /workspace/eliza-client/.env
+[34m ℹ INFORMATIONS
+  [34m Parsed settings: [0m
+  [34m {"USE_OPENAI_EMBEDDING_TYPE":"undefined","USE_OLLAMA_EMBEDDING_TYPE":"undefined","OLLAMA_EMBEDDING_MODEL":"mxbai-embed-large"} [0m
+
+[37m ["◎ DirectClient constructor"] [0m
+
+(node:10509) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m ["✓ REST API bound to 0.0.0.0:3000. If running locally, access it at http://localhost:3000."] [0m
+
+Killed
+ ELIFECYCLE  Command failed with exit code 137.
